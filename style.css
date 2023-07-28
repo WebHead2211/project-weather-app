@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+.bg {
+    /* The image used */
+    background-image: url('./images/night.jpg');
+
+    /* Full height */
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    left: 0;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    gap: 20px;
+    /* left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%); */
+}
+
+.date-container {
+    text-align: center;
+}
+
+.condition {
+    font-style: italic;
+    color: white;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.date {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   */
+}
+
+.content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.content h2 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.temp {
+    color: white;
+    font-size: 4rem;
+
+}
+
+.searchbox {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+input {
+    font-size: 28px;
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 10px;
+}
+
+button {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.1s linear;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+}
+
+.app {
+    margin-top: 300px;
+}
+
+.data-container {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+
+.data-container[data-status="active"] {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.data-container[data-status="next"] {
+    transform: translate(100%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.data-container[data-status="previous"] {
+    transform: translate(-200%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.data-container[data-status="unknown"] {
+    transform: translate(250%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slide-button-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    gap: 400px;
+}
+
+.hide-condition {
+    opacity: 0;
+}
+
+button:disabled {
+    pointer-events: none;
+}
+
+.error {
+    width: 64px;
+}
